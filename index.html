@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NOV‑BUD Piotr Nowak – Audyty energetyczne, termowizja, świadectwa</title>
-  <meta name="description" content="Badanie kamerą termowizyjną, audyty energetyczne, świadectwa charakterystyki energetycznej i adaptacje projektów. Profesjonalnie i szybko.">
+  <title>NOV‑BUD Piotr Nowak – Termowizja FLIR E8, audyty energetyczne, świadectwa, kosztorysy (woj. lubelskie)</title>
+  <meta name="description" content="Badanie kamerą termowizyjną FLIR E8, audyty energetyczne (także do programu Czyste Powietrze), świadectwa charakterystyki energetycznej, kosztorysy budowlane i adaptacje projektów. Obsługujemy województwo lubelskie." />
   <meta name="theme-color" content="#0ea5e9" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏗️</text></svg>">
-  <meta property="og:title" content="NOV‑BUD Piotr Nowak – Audyty energetyczne i termowizja" />
-  <meta property="og:description" content="Badanie kamerą termowizyjną, audyty energetyczne, świadectwa i adaptacje projektów." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100  100'><text y='0.9em' font-size='90'>🏗️</text></svg>">
+  <meta property="og:title" content="NOV‑BUD Piotr Nowak – Termowizja FLIR E8 i audyty" />
+  <meta property="og:description" content="Termowizja FLIR E8, audyty energetyczne (Czyste Powietrze), świadectwa, kosztorysy. Woj. lubelskie." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://dummyimage.com/1200x630/0ea5e9/ffffff&text=NOV-BUD+Piotr+Nowak" />
   <style>
@@ -40,7 +40,10 @@
     .badge{padding:.4rem .6rem; border:1px solid rgba(255,255,255,.12); border-radius:999px; color:#cbd5e1; font-size:.85rem}
     .hero-card{position:relative; border-radius:var(--radius); overflow:hidden; background:linear-gradient(160deg,#0e1a2f, #0b2536 60%, #091a2a); border:1px solid rgba(255,255,255,.06); box-shadow:0 20px 80px rgba(2,132,199,.25); padding:18px}
     .hero-card::after{content:""; position:absolute; inset:0; background:radial-gradient(60% 50% at 50% 0%, rgba(34,211,238,.18), transparent 60%)}
-    .hero-mock{aspect-ratio:4/3; border-radius:12px; border:1px solid rgba(255,255,255,.08); background:linear-gradient(120deg,#0b2438, #0e3a59); display:grid; place-items:center; font-weight:700; color:#dbeafe}
+    .thermal{aspect-ratio:4/3; border-radius:12px; border:1px solid rgba(255,255,255,.08); display:grid; place-items:center; font-weight:700; color:#0b1220;
+      background: conic-gradient(from 180deg, #2b00ff, #0055ff, #00aaff, #00ffc6, #7dff00, #fff200, #ff8a00, #ff0044, #2b00ff);
+      filter: saturate(120%) contrast(120%);
+    }
     .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
     .card{background:rgba(15,23,42,.6); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:20px}
     .card h3{margin:.2rem 0 .6rem}
@@ -84,7 +87,7 @@
       e.preventDefault();
       const data = Object.fromEntries(new FormData(e.target).entries());
       const body = encodeURIComponent(`Imię: ${data.name}\nTelefon: ${data.phone}\nEmail: ${data.email}\nUsługa: ${data.service}\nWiadomość:\n${data.message}`);
-      window.location.href = `mailto:kontakt@nov-bud.pl?subject=Zapytanie%20ze%20strony&body=${body}`;
+      window.location.href = `mailto:biuro@nov-bud.pl?subject=Zapytanie%20ze%20strony&body=${body}`;
     }
   </script>
   <script type="application/ld+json">
@@ -94,11 +97,11 @@
     "name": "NOV‑BUD Piotr Nowak",
     "image": "https://dummyimage.com/1200x630/0ea5e9/ffffff&text=NOV-BUD",
     "telephone": "+48 600 000 000",
-    "email": "kontakt@nov-bud.pl",
-    "address": {"@type":"PostalAddress","addressCountry":"PL"},
-    "areaServed": "Polska",
-    "serviceType": ["Badanie kamerą termowizyjną","Audyt energetyczny","Świadectwo charakterystyki energetycznej","Adaptacje projektów"],
-    "url": "https://termo-lab.github.io/novbud/"
+    "email": "biuro@nov-bud.pl",
+    "address": {"@type":"PostalAddress","streetAddress":"ul. Jagiellońska 59","postalCode":"23-200","addressLocality":"Kraśnik","addressCountry":"PL"},
+    "areaServed": "Województwo lubelskie",
+    "serviceType": ["Termowizja FLIR E8","Audyt energetyczny (Czyste Powietrze)","Świadectwo charakterystyki energetycznej","Kosztorysy budowlane","Adaptacje projektów"],
+    "url": "https://termo-lab.github.io/NOV-BUD-Piotr-Nowak/"
   }
   </script>
 </head>
@@ -114,7 +117,7 @@
         <a href="#proces">Proces</a>
         <a href="#cennik">Cennik</a>
         <a href="#faq">FAQ</a>
-        <a href="#kontakt" class="btn">Umów wizytę</a>
+        <a href="#kontakt" class="btn">Zamów usługę</a>
       </nav>
       <button class="btn outline mobile" onclick="toggleMenu()">Menu</button>
     </div>
@@ -124,7 +127,7 @@
         <a href="#proces">Proces</a>
         <a href="#cennik">Cennik</a>
         <a href="#faq">FAQ</a>
-        <a href="#kontakt" class="btn">Umów wizytę</a>
+        <a href="#kontakt" class="btn">Zamów usługę</a>
       </div>
     </div>
   </header>
@@ -134,21 +137,22 @@
       <div class="container wrap">
         <div>
           <div class="badges">
-            <span class="badge">🌡️ Termowizja</span>
-            <span class="badge">⚡ Audyty energetyczne</span>
+            <span class="badge">🌡️ Termowizja – FLIR E8</span>
+            <span class="badge">⚡ Audyty (Czyste Powietrze)</span>
             <span class="badge">🎯 Świadectwa energetyczne</span>
             <span class="badge">📐 Adaptacje projektów</span>
+            <span class="badge">💶 Kosztorysy budowlane</span>
           </div>
-          <h2>Oszczędzaj energię i wychwytuj ucieczki ciepła.<br/>Profesjonalnie. Szybko. W całej Polsce.</h2>
-          <p>Wykonujemy badania kamerą termowizyjną, audyty energetyczne, świadectwa charakterystyki energetycznej oraz adaptacje projektów. Pracujemy na certyfikowanym sprzęcie, a raport dostajesz w 48–72 h.</p>
+          <h2>Badania termowizyjne i audyty energetyczne – woj. lubelskie</h2>
+          <p>Specjalizujemy się w badaniach kamerą termowizyjną <b>FLIR E8</b>, audytach energetycznych (także do programu <b>Czyste Powietrze</b>), świadectwach energetycznych, kosztorysach budowlanych i adaptacjach projektów.</p>
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
             <a class="btn" href="#kontakt">Zamów usługę</a>
             <a class="btn outline" href="tel:+48600000000">Zadzwoń: +48 600 000 000</a>
           </div>
-          <p class="small" style="margin-top:10px; color:#94a3b8">Faktura VAT • Uprawnienia • Ubezpieczenie OC</p>
+          <p class="small" style="margin-top:10px; color:#94a3b8">Obsługujemy wyłącznie <b>województwo lubelskie</b>.</p>
         </div>
         <div class="hero-card">
-          <div class="hero-mock">Przykładowy kadr z badania termowizyjnego</div>
+          <div class="thermal">Kadr z termowizji (symulacja)</div>
         </div>
       </div>
     </section>
@@ -158,20 +162,24 @@
         <h2>Usługi</h2>
         <div class="grid-3">
           <div class="card">
-            <h3>Badanie kamerą termowizyjną</h3>
-            <p class="muted">Mostki termiczne, nieszczelności, ocena ocieplenia, przegląd instalacji. Raport PDF z wnioskami.</p>
+            <h3>Termowizja FLIR E8</h3>
+            <p class="muted">Wykrywanie mostków termicznych, nieszczelności, zawilgoceń i błędów ocieplenia. Raport ze zdjęciami IR.</p>
           </div>
           <div class="card">
             <h3>Audyt energetyczny</h3>
-            <p class="muted">Analiza zużycia energii i opłacalności modernizacji. Rekomendacje: ocieplenie, stolarka, źródła ciepła.</p>
+            <p class="muted">Audyty dla domów jednorodzinnych, także do programu <b>Czyste Powietrze</b>. Rekomendacje i kalkulacja oszczędności.</p>
           </div>
           <div class="card">
-            <h3>Świadectwo energetyczne</h3>
-            <p class="muted">Wystawianie świadectw wymaganych przy sprzedaży i najmie. Szybkie terminy, obsługa zdalna.</p>
+            <h3>Świadectwa energetyczne</h3>
+            <p class="muted">Wystawianie świadectw przy sprzedaży i najmie. Krótkie terminy, dokument PDF.</p>
+          </div>
+          <div class="card">
+            <h3>Kosztorysy budowlane</h3>
+            <p class="muted">Kosztorysy inwestorskie i ofertowe na podstawie projektu lub przedmiaru.</p>
           </div>
           <div class="card">
             <h3>Adaptacje projektów</h3>
-            <p class="muted">Dostosowanie dokumentacji do warunków lokalnych i wymogów prawa. Komplet rysunków i opisów.</p>
+            <p class="muted">Dostosowanie projektu do warunków lokalnych i wymagań urzędowych.</p>
           </div>
         </div>
       </div>
@@ -179,12 +187,12 @@
 
     <section id="proces" class="section">
       <div class="container">
-        <h2>Jak pracujemy</h2>
+        <h2>Jak przebiega współpraca</h2>
         <div class="steps">
-          <div class="step"><b>1. Konsultacja</b><span class="muted">Zakres, cel i termin.</span></div>
-          <div class="step"><b>2. Pomiary</b><span class="muted">Wizja lokalna i skan termowizyjny.</span></div>
-          <div class="step"><b>3. Analiza</b><span class="muted">Model cieplny i wnioski.</span></div>
-          <div class="step"><b>4. Raport</b><span class="muted">PDF z rekomendacjami i listą działań.</span></div>
+          <div class="step"><b>1. Kontakt</b><span class="muted">Ustalamy zakres i termin.</span></div>
+          <div class="step"><b>2. Pomiary</b><span class="muted">Wizja lokalna i skan FLIR E8.</span></div>
+          <div class="step"><b>3. Analiza</b><span class="muted">Opracowanie wniosków i rekomendacji.</span></div>
+          <div class="step"><b>4. Dokumenty</b><span class="muted">Raport PDF / audyt / świadectwo.</span></div>
         </div>
       </div>
     </section>
@@ -198,39 +206,27 @@
             <p><span class="big">od 349 zł</span> brutto</p>
             <ul>
               <li>Mieszkanie do 60 m²</li>
-              <li>Realizacja 48 h</li>
               <li>PDF + rejestracja</li>
             </ul>
           </div>
           <div class="plan" style="border-color:rgba(34,211,238,.45)">
-            <h3>Audyt energetyczny</h3>
+            <h3>Audyt (Czyste Powietrze)</h3>
             <p><span class="big">od 1490 zł</span> brutto</p>
             <ul>
-              <li>Dom jednorodzinny do 180 m²</li>
-              <li>Raport oszczędności i ROI</li>
-              <li>Lista rekomendacji</li>
+              <li>Dom jednorodzinny</li>
+              <li>Lista działań i oszczędności</li>
             </ul>
           </div>
           <div class="plan">
-            <h3>Termowizja</h3>
+            <h3>Termowizja FLIR E8</h3>
             <p><span class="big">od 490 zł</span> brutto</p>
             <ul>
               <li>Badanie do 2 h</li>
-              <li>Do 20 zdjęć z opisem</li>
-              <li>Raport PDF 24–72 h</li>
+              <li>Raport IR 24–72 h</li>
             </ul>
           </div>
         </div>
-        <p class="small muted" style="margin-top:10px">Ceny orientacyjne – ostateczna wycena po krótkiej rozmowie i przesłaniu rzutów/zdjęć.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="kudos">
-          <span>✅</span>
-          <p><b>Rabat –10%</b> przy połączeniu termowizji i świadectwa energetycznego.</p>
-        </div>
+        <p class="small muted" style="margin-top:10px">Ostateczna wycena po krótkiej rozmowie i przesłaniu rzutów/zdjęć.</p>
       </div>
     </section>
 
@@ -238,16 +234,12 @@
       <div class="container">
         <h2>FAQ</h2>
         <details>
+          <summary>W jakim regionie działacie?</summary>
+          <p class="muted">Obsługujemy wyłącznie <b>województwo lubelskie</b>.</p>
+        </details>
+        <details>
           <summary>Jak przygotować budynek do termowizji?</summary>
           <p class="muted">Najlepiej badać przy różnicy temperatur min. 10–15°C między wnętrzem a zewnętrzem. Zamknij okna i drzwi na 2–3 h przed wizytą.</p>
-        </details>
-        <details>
-          <summary>Ile trwa audyt energetyczny?</summary>
-          <p class="muted">Wizyta 1–3 h, raport w 48–72 h. Przy obiektach większych – indywidualnie.</p>
-        </details>
-        <details>
-          <summary>Czy działacie w całej Polsce?</summary>
-          <p class="muted">Tak – dojazd wliczony lokalnie, poza – indywidualna wycena.</p>
         </details>
       </div>
     </section>
@@ -256,7 +248,7 @@
       <div class="container contact">
         <div>
           <h2>Kontakt</h2>
-          <p class="muted">Zostaw wiadomość – oddzwonimy tego samego dnia roboczego.</p>
+          <p class="muted">Zostaw wiadomość – odpiszemy i potwierdzimy termin.</p>
           <form onsubmit="handleSubmit(event)">
             <label>Imię i nazwisko
               <input name="name" placeholder="Jan Kowalski" required />
@@ -268,49 +260,27 @@
               <input name="email" type="email" placeholder="jan@przyklad.pl" required />
             </label>
             <label>Usługa
-              <input name="service" placeholder="Termowizja / Audyt / Świadectwo / Adaptacje" />
+              <input name="service" placeholder="Termowizja / Audyt / Świadectwo / Kosztorys / Adaptacja" />
             </label>
             <label>Wiadomość
               <textarea name="message" rows="5" placeholder="Opisz obiekt, metraż, lokalizację…"></textarea>
             </label>
-            <button class="btn" type="submit">Wyślij zapytanie</button>
+            <button class="btn" type="submit">Zamów usługę</button>
           </form>
-          <p class="small" style="margin-top:8px">lub napisz: <a href="mailto:kontakt@nov-bud.pl">kontakt@nov-bud.pl</a></p>
+          <p class="small" style="margin-top:8px">lub napisz: <a href="mailto:biuro@nov-bud.pl">biuro@nov-bud.pl</a></p>
         </div>
         <div class="card">
           <h3>Dane firmy</h3>
-          <p class="muted">NOV‑BUD Piotr Nowak<br/>ul. Przykładowa 1, 00-000 Miasto<br/>NIP: 000-000-00-00</p>
+          <p class="muted"><b>Piotr Nowak</b><br/>ul. Jagiellońska 59<br/>23-200 Kraśnik<br/>NIP: 7151741962</p>
           <p>Godziny: Pon–Pt 8:00–17:00</p>
-          <div style="height:240px; border-radius:12px; border:1px solid rgba(255,255,255,.08); background:rgba(2,6,23,.5); display:grid; place-items:center">Mapa – wstaw później</div>
+          <div style="height:260px; border-radius:12px; border:1px solid rgba(255,255,255,.08); overflow:hidden">
+            <iframe title="Mapa Kraśnik, ul. Jagiellońska 59" width="100%" height="260" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Jagiello%C5%84ska+59,+Kra%C5%9Bnik&output=embed"></iframe>
+          </div>
         </div>
       </div>
     </section>
   </main>
-<section class="services bg-gray-50 py-12" id="uslugi">
-  <div class="container">
-    <h2>Nasze usługi</h2>
-    <ul>
-      <li>🔹 Audyty energetyczne budynków</li>
-      <li>🔹 Świadectwa charakterystyki energetycznej</li>
-      <li>🔹 Badania kamerą termowizyjną</li>
-      <li>🔹 Adaptacje projektów budowlanych</li>
-      <li>🔹 Kosztorysy budowlane i inwestorskie</li>
-    </ul>
-    <p>Obsługujemy wyłącznie teren <strong>województwa lubelskiego</strong>.</p>
-  </div>
-</section>
-
-<footer class="bg-dark text-white py-8" id="kontakt">
-  <div class="container">
-    <h3>Kontakt</h3>
-    <p><strong>Piotr Nowak</strong><br>
-    ul. Jagiellońska 59<br>
-    23-200 Kraśnik<br>
-    NIP: 7151741962</p>
-    <p>📞 <a href="tel:+48501234567" class="text-white">+48 501 234 567</a><br>
-    ✉️ <a href="mailto:biuro@novbud.pl" class="text-white">biuro@novbud.pl</a></p>
-  </div>
-</footer>
 
   <footer>
     <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
