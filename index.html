@@ -1,6 +1,284 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NOV-BUD Piotr Nowak – Termowizja FLIR E8, audyty energetyczne, świadectwa, kosztorysy (woj. lubelskie)</title>
+  <meta name="description" content="Badanie kamerą termowizyjną FLIR E8, audyty energetyczne (także do programu Czyste Powietrze), świadectwa charakterystyki energetycznej, kosztorysy budowlane i adaptacje projektów. Obsługujemy województwo lubelskie." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="logo.png" />
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#0f172a; --muted:#94a3b8; --brand:#0ea5e9; --brand-2:#22d3ee; --text:#e5e7eb;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; background:linear-gradient(180deg,var(--bg),#0c1a2b); color:var(--text);}
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; height:auto; display:block}
+    .container{width:min(1120px, 92%); margin-inline:auto}
+    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.9rem 1.2rem; border-radius:calc(var(--radius) - 6px); background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#00111b; font-weight:700; box-shadow:0 10px 30px rgba(34,211,238,.17); transition:.25s transform, .25s box-shadow}
+    .btn:hover{transform:translateY(-1px); box-shadow:0 16px 36px rgba(34,211,238,.24)}
+    .btn.outline{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.18)}
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(10px); background:rgba(2,6,23,.6); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+    .brand{display:flex; gap:.7rem; align-items:center}
+    .logo{width:38px; height:38px; display:grid; place-items:center; border-radius:12px; background:radial-gradient(60% 60% at 40% 30%, var(--brand-2), var(--brand)); box-shadow:inset 0 0 12px rgba(255,255,255,.15)}
+    .brand h1{font-size:1.05rem; margin:0; letter-spacing:.2px}
+    nav a{opacity:.9}
+    .menu{display:flex; gap:1.1rem; align-items:center}
+    .mobile{display:none}
+    .hero{padding:56px 0 28px}
+    .hero .wrap{display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:center}
+    .hero h2{font-size:clamp(1.9rem, 2.6vw + 1rem, 3rem); line-height:1.1; margin:.2rem 0 1rem}
+    .hero p{font-size:1.08rem; color:var(--muted)}
+    .badges{display:flex; gap:.6rem; flex-wrap:wrap; margin:.8rem 0 1.2rem}
+    .badge{padding:.4rem .6rem; border:1px solid rgba(255,255,255,.12); border-radius:999px; color:#cbd5e1; font-size:.85rem}
+    .hero-card{position:relative; border-radius:var(--radius); overflow:hidden; background:linear-gradient(160deg,#0e1a2f, #0b2536 60%, #091a2a); border:1px solid rgba(255,255,255,.06); box-shadow:0 20px 80px rgba(2,132,199,.25); padding:18px}
+    .hero-card::after{content:""; position:absolute; inset:0; background:radial-gradient(60% 50% at 50% 0%, rgba(34,211,238,.18), transparent 60%)}
+    .thermal{aspect-ratio:4/3; border-radius:12px; border:1px solid rgba(255,255,255,.08); display:grid; place-items:center; font-weight:700; color:#0b1220;
+      background: conic-gradient(from 180deg, #2b00ff, #0055ff, #00aaff, #00ffc6, #7dff00, #fff200, #ff8a00, #ff0044, #2b00ff);
+      filter: saturate(120%) contrast(120%);
+    }
+    footer{border-top:1px solid rgba(255,255,255,.06); padding:26px 0; color:#98a4b6; font-size:.9rem}
+    @media (max-width: 960px){
+      .hero .wrap{grid-template-columns:1fr}
+      .menu.desktop{display:none}
+      .mobile{display:inline-flex}
+    }
+  </style>
+  <script>
+    function toggleMenu(){document.querySelector('#mobileMenu').hidden = !document.querySelector('#mobileMenu').hidden;}
+    function handleSubmit(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      const body = encodeURIComponent(`Imię: ${data.name}\nTelefon: ${data.phone}\nEmail: ${data.email}\nWiadomość:\n${data.message}`);
+      window.location.href = `mailto:p.novak@o2.pl?subject=Zapytanie%20ze%20strony&body=${body}`;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="logo">🏗️</div>
+        <h1>NOV-BUD Piotr Nowak</h1>
+      </a>
+      <nav class="menu desktop">
+        <a href="index.html">Strona główna</a>
+        <a href="wynajem.html">Wynajem</a>
+        <a href="#kontakt" class="btn">Kontakt</a>
+      </nav>
+      <button class="btn outline mobile" onclick="toggleMenu()">Menu</button>
+    </div>
+    <div id="mobileMenu" class="container" hidden>
+      <div class="menu" style="padding:10px 0 16px; gap:12px; flex-wrap:wrap;">
+        <a href="index.html">Strona główna</a>
+        <a href="wynajem.html">Wynajem</a>
+        <a href="#kontakt" class="btn">Kontakt</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="container wrap">
+      <div>
+        <div class="badges">
+          <span class="badge">🌡️ Termowizja – FLIR E8</span>
+          <span class="badge">⚡ Audyty (Czyste Powietrze)</span>
+          <span class="badge">📐 Kosztorysy budowlane</span>
+        </div>
+        <h2>Badania termowizyjne i audyty energetyczne – woj. lubelskie</h2>
+        <p>Specjalizujemy się w badaniach kamerą termowizyjną <b>FLIR E8</b>, audytach energetycznych, kosztorysach budowlanych i adaptacjach projektów.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+          <a class="btn" href="#kontakt">Skontaktuj się</a>
+          <a class="btn outline" href="wynajem.html">Wynajem sprzętu</a>
+        </div>
+        <p style="margin-top:10px; color:#94a3b8">📞 508 371 380 &nbsp;&nbsp; ✉️ <a href="mailto:p.novak@o2.pl">p.novak@o2.pl</a></p>
+      </div>
+      <div class="hero-card">
+        <div class="thermal">Kadr z termowizji FLIR E8</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+      <span>© <span id="year"></span> NOV-BUD Piotr Nowak</span>
+      <span><a href="mailto:p.novak@o2.pl">p.novak@o2.pl</a></span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
+✅ Co teraz zrobić:
+
+Na GitHubie kliknij Add file → Upload files
+
+Wgraj:
+
+index.html (ten powyżej),
+
+wynajem.html (ten, który masz),
+
+logo.png
+
+Kliknij Commit changes
+
+Po minucie strona będzie działać:
+
+Strona główna → https://termo-lab.github.io/NOV-BUD-Piotr-Nowak/
+
+Podstrona wynajem → https://termo-lab.github.io/NOV-BUD-Piotr-Nowak/wynajem.html
+
+Czy chcesz, żebym dodał jeszcze link z wynajmu z powrotem do strony głównej (żeby łatwo wracać)?
+
+
+
+
+
+
+Powiedziałeś(-aś):
+tak napisz kod zip
+
+
+
+ChatGPT powiedział:
+Świetnie ✅
+Przygotuję teraz kompletny pakiet .zip, w którym będą:
+
+📄 index.html — Twoja strona główna,
+
+📄 wynajem.html — podstrona z wynajmem, z linkiem „Powrót do strony głównej”,
+
+🖼️ logo.png — (wystarczy, że dołączysz swój plik, ja zrobię ścieżkę gotową pod to).
+
+Zrobimy tak, że obie strony będą połączone:
+➡️ z głównej wejdziesz w „Wynajem”,
+➡️ a z wynajmu wrócisz jednym kliknięciem do strony głównej.
+
+📦 Kod wynajem.html z dodanym linkiem „Powrót do strony głównej”:
+
+html
+Skopiuj kod
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wynajem sprzętu i maszyn – NOV-BUD Piotr Nowak</title>
+  <meta name="description" content="Wynajem sprzętu budowlanego i ogrodowego – zagęszczarka LUMAG, rębak do drewna. Kraśnik i woj. lubelskie. Tel. 508 371 380." />
+  <link rel="icon" href="logo.png" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #0f172a;
+      --accent: #0ea5e9;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--panel);
+      padding: 14px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    header img { height: 46px; }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    nav a:hover { color: var(--accent); }
+    h1 {
+      text-align: center;
+      color: var(--accent);
+      margin-top: 60px;
+      font-size: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .card {
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .card h3 { margin-top: 0; color: var(--accent); }
+    .card p { color: var(--muted); }
+    .back {
+      display: block;
+      text-align: center;
+      margin: 40px auto;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid var(--accent);
+      padding: 10px 18px;
+      border-radius: 10px;
+      width: fit-content;
+    }
+    footer {
+      background: var(--panel);
+      color: var(--muted);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="logo.png" alt="Logo NOV-BUD Piotr Nowak" /></a>
+    <nav>
+      <a href="index.html">Strona główna</a>
+      <a href="wynajem.html">Wynajem</a>
+    </nav>
+  </header>
+
+  <h1>Wynajem sprzętu i maszyn</h1>
+  <div class="grid">
+    <div class="card">
+      <h3>Zagęszczarka LUMAG</h3>
+      <p>Mocna płyta wibracyjna do prac brukarskich i ziemnych.</p>
+      <p><b>250 zł / doba</b></p>
+    </div>
+    <div class="card">
+      <h3>Rębak do drewna</h3>
+      <p>Rozdrabnianie gałęzi i odpadów drzewnych. Wydajny i mobilny.</p>
+      <p><b>300 zł / doba</b></p>
+    </div>
+    <div class="card">
+      <h3>Inny sprzęt</h3>
+      <p>Możliwość dodania kolejnych pozycji – np. betoniarka, niwelator, myjka.</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="back">← Powrót do strony głównej</a>
+
+  <footer>
+    © 2025 NOV-BUD Piotr Nowak – Wynajem sprzętu i maszyn | Kontakt: <a href="mailto:p.novak@o2.pl" style="color:#38bdf8;">p.novak@o2.pl</a>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wynajem sprzętu i maszyn – NOV-BUD Piotr Nowak</title>
