@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Wynajem sprzętu i maszyn – NOV‑BUD Piotr Nowak (woj. lubelskie)</title>
+  <meta name="description" content="Wynajem: zagęszczarka Lumag, rębak do drewna i inne maszyny. Kraśnik i okolice. Tel. 508 371 380.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏗️</text></svg>">
+  <style>
+    :root{--bg:#0b1220; --panel:#0f172a; --muted:#94a3b8; --brand:#0ea5e9; --brand-2:#22d3ee; --text:#e5e7eb; --radius:18px;}
+    *{box-sizing:border-box}
+    html,body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; background:linear-gradient(180deg,var(--bg),#0c1a2b); color:var(--text);}
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; height:auto; display:block}
+    .container{width:min(1120px, 92%); margin-inline:auto}
+    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.9rem 1.2rem; border-radius:12px; background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#00111b; font-weight:700; box-shadow:0 10px 30px rgba(34,211,238,.17); transition:.25s transform,.25s box-shadow}
+    .btn:hover{transform:translateY(-1px); box-shadow:0 16px 36px rgba(34,211,238,.24)}
+    .btn.outline{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.18)}
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(10px); background:rgba(2,6,23,.6); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+    .brand{display:flex; gap:.8rem; align-items:center}
+    .logo{height:52px; display:grid; place-items:center; overflow:visible; background:transparent}
+    .logo img{height:52px; width:auto; display:block}
+    nav a{opacity:.9}
+    .menu{display:flex; gap:1.1rem; align-items:center}
+    .mobile{display:none}
+    .hero{padding:56px 0 28px}
+    .hero .wrap{display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:center}
+    .hero h1,.hero h2{font-size:clamp(1.9rem, 2.6vw + 1rem, 3rem); line-height:1.1; margin:.2rem 0 1rem}
+    .hero p{font-size:1.08rem; color:var(--muted)}
+    .badges{display:flex; gap:.6rem; flex-wrap:wrap; margin:.8rem 0 1.2rem}
+    .badge{padding:.4rem .6rem; border:1px solid rgba(255,255,255,.12); border-radius:999px; color:#cbd5e1; font-size:.85rem}
+    .hero-card{position:relative; border-radius:var(--radius); overflow:hidden; background:linear-gradient(160deg,#0e1a2f, #0b2536 60%, #091a2a); border:1px solid rgba(255,255,255,.06); box-shadow:0 20px 80px rgba(2,132,199,.25); padding:18px}
+    .thermal{aspect-ratio:4/3; border-radius:12px; border:1px solid rgba(255,255,255,.08); display:grid; place-items:center; font-weight:700; color:#0b1220;
+      background: conic-gradient(from 180deg, #2b00ff, #0055ff, #00aaff, #00ffc6, #7dff00, #fff200, #ff8a00, #ff0044, #2b00ff);
+      filter: saturate(120%) contrast(120%);
+    }
+    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .card{background:rgba(15,23,42,.6); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:20px}
+    .card h3{margin:.2rem 0 .6rem}
+    .muted{color:var(--muted)}
+    .section{padding:36px 0}
+    .section h2{font-size:1.6rem}
+    .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+    .step{padding:18px; border-radius:14px; background:rgba(2,6,23,.5); border:1px dashed rgba(255,255,255,.12)}
+    .step b{display:block; margin-bottom:.3rem}
+    .price{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .price .plan{padding:22px; border-radius:var(--radius); background:rgba(2,6,23,.5); border:1px solid rgba(255,255,255,.08)}
+    .plan .big{font-size:2rem; font-weight:800}
+    .plan ul{margin:0; padding-left:1.1rem}
+    .faq details{background:rgba(2,6,23,.5); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:14px 16px}
+    .faq details+details{margin-top:10px}
+    .faq summary{cursor:pointer; font-weight:600}
+    .contact{display:grid; grid-template-columns:1.1fr .9fr; gap:20px}
+    form{display:grid; gap:10px}
+    input, textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(2,6,23,.5); color:var(--text)}
+    label{font-size:.9rem; color:#cbd5e1}
+    .small{font-size:.86rem}
+    footer{border-top:1px solid rgba(255,255,255,.06); padding:26px 0; color:#98a4b6; font-size:.9rem}
+    table{width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border-radius:12px; border:1px solid rgba(255,255,255,.08)}
+    th,td{padding:12px 14px; text-align:left; border-bottom:1px solid rgba(255,255,255,.06)}
+    th{background:rgba(2,6,23,.5)}
+    tr:last-child td{border-bottom:none}
+    @media (max-width: 960px){.hero .wrap{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr} .steps{grid-template-columns:1fr 1fr} .price{grid-template-columns:1fr} .contact{grid-template-columns:1fr} .menu.desktop{display:none} .mobile{display:inline-flex}}
+  </style>
+
+</head>
+<body>
+  
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Strona główna">
+        <div class="logo"><img src="logo.png" alt="Logo NOV‑BUD Piotr Nowak" loading="eager"></div>
+      </a>
+      <nav class="menu desktop">
+        <a href="index.html#uslugi">Usługi</a>
+        <a href="index.html#proces">Proces</a>
+        <a href="index.html#cennik">Cennik</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="wynajem.html">Wynajem</a>
+        <a href="index.html#kontakt" class="btn">Zamów usługę</a>
+      </nav>
+      <button class="btn outline mobile" onclick="(function(){document.querySelector('#mobileMenu').hidden = !document.querySelector('#mobileMenu').hidden})()">Menu</button>
+    </div>
+    <div id="mobileMenu" class="container" hidden>
+      <div class="menu" style="padding:10px 0 16px; gap:12px; flex-wrap:wrap;">
+        <a href="index.html#uslugi">Usługi</a>
+        <a href="index.html#proces">Proces</a>
+        <a href="index.html#cennik">Cennik</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="wynajem.html">Wynajem</a>
+        <a href="index.html#kontakt" class="btn">Zamów usługę</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Wynajem sprzętu i maszyn</h1>
+        <p class="muted">Kraśnik i woj. lubelskie. Odbiór osobisty lub dowóz po uzgodnieniu. Kaucja wg maszyny.</p>
+
+        <div class="grid-3" style="margin-top:16px">
+          <div class="card">
+            <h3>Zagęszczarka LUMAG</h3>
+            <p class="muted">Mocna płyta wibracyjna do kostki i podsypek.</p>
+            <p><b>250 zł / doba</b></p>
+          </div>
+          <div class="card">
+            <h3>Rębak do drewna</h3>
+            <p class="muted">Gałęzie i odpady drzewne.</p>
+            <p><b>300 zł / doba</b></p>
+          </div>
+          <div class="card">
+            <h3>Inny sprzęt</h3>
+            <p class="muted">Dodaj kolejne pozycje według potrzeb.</p>
+            <p><b>—</b></p>
+          </div>
+        </div>
+
+        <h2 style="margin-top:28px">Cennik</h2>
+        <table>
+          <thead><tr><th>Sprzęt</th><th>Stawka</th><th>Jednostka</th><th>Uwagi</th></tr></thead>
+          <tbody>
+            <tr><td>Zagęszczarka LUMAG</td><td>250 zł</td><td>doba</td><td>Opcja dowozu</td></tr>
+            <tr><td>Rębak do drewna</td><td>300 zł</td><td>doba</td><td>Bez paliwa</td></tr>
+            <!-- PRZYKŁAD: skopiuj wiersz poniżej i edytuj nazwę/cenę
+            <tr><td>Młot wyburzeniowy</td><td>150 zł</td><td>doba</td><td>W zestawie dłuto</td></tr>
+            -->
+          </tbody>
+        </table>
+
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="tel:+48508371380">Zadzwoń: +48 508 371 380</a>
+          <a class="btn outline" href="mailto:p.novak@o2.pl">Napisz: p.novak@o2.pl</a>
+          <a class="btn outline" href="index.html">← Wróć na stronę główną</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+      <span>© <span id="year"></span> NOV‑BUD Piotr Nowak</span>
+      <span><a href="#">Polityka prywatności</a> • <a href="#">RODO</a></span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
