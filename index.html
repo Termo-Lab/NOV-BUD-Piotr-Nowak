@@ -1,16 +1,12 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
+  <title>Wynajem sprzętu i maszyn – NOV‑BUD Piotr Nowak (woj. lubelskie)</title>
+  <meta name="description" content="Wynajem: zagęszczarka Lumag, rębak do drewna i inne maszyny. Kraśnik i okolice. Tel. 508 371 380.">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NOV‑BUD Piotr Nowak – Termowizja FLIR E8, audyty energetyczne, świadectwa, kosztorysy (woj. lubelskie)</title>
-  <meta name="description" content="Badanie kamerą termowizyjną FLIR E8, audyty energetyczne (także do programu Czyste Powietrze), świadectwa charakterystyki energetycznej, kosztorysy budowlane i adaptacje projektów. Obsługujemy województwo lubelskie." />
   <meta name="theme-color" content="#0ea5e9" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100  100'><text y='0.9em' font-size='90'></text></svg>">
-  <meta property="og:title" content="NOV‑BUD Piotr Nowak – Termowizja FLIR E8 i audyty" />
-  <meta property="og:description" content="Termowizja FLIR E8, audyty energetyczne (Czyste Powietrze), świadectwa, kosztorysy. Woj. lubelskie." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://dummyimage.com/1200x630/0ea5e9/ffffff&text=NOV-BUD+Piotr+Nowak" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏗️</text></svg>">
   <style>
     :root{--bg:#0b1220; --panel:#0f172a; --muted:#94a3b8; --brand:#0ea5e9; --brand-2:#22d3ee; --text:#e5e7eb; --radius:18px;}
     *{box-sizing:border-box}
@@ -18,25 +14,24 @@
     a{color:inherit; text-decoration:none}
     img{max-width:100%; height:auto; display:block}
     .container{width:min(1120px, 92%); margin-inline:auto}
-    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.9rem 1.2rem; border-radius:calc(var(--radius) - 6px); background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#00111b; font-weight:700; box-shadow:0 10px 30px rgba(34,211,238,.17); transition:.25s transform, .25s box-shadow}
+    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.9rem 1.2rem; border-radius:12px; background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#00111b; font-weight:700; box-shadow:0 10px 30px rgba(34,211,238,.17); transition:.25s transform,.25s box-shadow}
     .btn:hover{transform:translateY(-1px); box-shadow:0 16px 36px rgba(34,211,238,.24)}
     .btn.outline{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.18)}
     header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(10px); background:rgba(2,6,23,.6); border-bottom:1px solid rgba(255,255,255,.06)}
     .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
-    .brand{display:flex; gap:.7rem; align-items:center}
-    .logo{width:400px; height:400px; display:grid; place-items:center; border-radius:12px; overflow:hidden; background:#0b1220}
-    .brand h1{font-size:1.05rem; margin:0; letter-spacing:.2px}
+    .brand{display:flex; gap:.8rem; align-items:center}
+    .logo{height:52px; display:grid; place-items:center; overflow:visible; background:transparent}
+    .logo img{height:52px; width:auto; display:block}
     nav a{opacity:.9}
     .menu{display:flex; gap:1.1rem; align-items:center}
     .mobile{display:none}
     .hero{padding:56px 0 28px}
     .hero .wrap{display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:center}
-    .hero h2{font-size:clamp(1.9rem, 2.6vw + 1rem, 3rem); line-height:1.1; margin:.2rem 0 1rem}
+    .hero h1,.hero h2{font-size:clamp(1.9rem, 2.6vw + 1rem, 3rem); line-height:1.1; margin:.2rem 0 1rem}
     .hero p{font-size:1.08rem; color:var(--muted)}
     .badges{display:flex; gap:.6rem; flex-wrap:wrap; margin:.8rem 0 1.2rem}
     .badge{padding:.4rem .6rem; border:1px solid rgba(255,255,255,.12); border-radius:999px; color:#cbd5e1; font-size:.85rem}
     .hero-card{position:relative; border-radius:var(--radius); overflow:hidden; background:linear-gradient(160deg,#0e1a2f, #0b2536 60%, #091a2a); border:1px solid rgba(255,255,255,.06); box-shadow:0 20px 80px rgba(2,132,199,.25); padding:18px}
-    .hero-card::after{content:""; position:absolute; inset:0; background:radial-gradient(60% 50% at 50% 0%, rgba(34,211,238,.18), transparent 60%)}
     .thermal{aspect-ratio:4/3; border-radius:12px; border:1px solid rgba(255,255,255,.08); display:grid; place-items:center; font-weight:700; color:#0b1220;
       background: conic-gradient(from 180deg, #2b00ff, #0055ff, #00aaff, #00ffc6, #7dff00, #fff200, #ff8a00, #ff0044, #2b00ff);
       filter: saturate(120%) contrast(120%);
@@ -62,218 +57,85 @@
     input, textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(2,6,23,.5); color:var(--text)}
     label{font-size:.9rem; color:#cbd5e1}
     .small{font-size:.86rem}
-    .kudos{display:flex; gap:12px; align-items:center; color:#e2e8f0}
-    .kudos b{color:#22c55e}
     footer{border-top:1px solid rgba(255,255,255,.06); padding:26px 0; color:#98a4b6; font-size:.9rem}
-    @media (max-width: 960px){
-      .hero .wrap{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .steps{grid-template-columns:1fr 1fr}
-      .price{grid-template-columns:1fr}
-      .contact{grid-template-columns:1fr}
-      .menu.desktop{display:none}
-      .mobile{display:inline-flex}
-    }
+    table{width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border-radius:12px; border:1px solid rgba(255,255,255,.08)}
+    th,td{padding:12px 14px; text-align:left; border-bottom:1px solid rgba(255,255,255,.06)}
+    th{background:rgba(2,6,23,.5)}
+    tr:last-child td{border-bottom:none}
+    @media (max-width: 960px){.hero .wrap{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr} .steps{grid-template-columns:1fr 1fr} .price{grid-template-columns:1fr} .contact{grid-template-columns:1fr} .menu.desktop{display:none} .mobile{display:inline-flex}}
   </style>
-  <script>
-    function toggleMenu(){
-      const m = document.querySelector('#mobileMenu');
-      m.hidden = !m.hidden;
-    }
-    function handleSubmit(e){
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(e.target).entries());
-      const body = encodeURIComponent(`Imię: ${data.name}\nTelefon: ${data.phone}\nEmail: ${data.email}\nUsługa: ${data.service}\nWiadomość:\n${data.message}`);
-      window.location.href = `mailto:p.novak@o2.pl?subject=Zapytanie%20ze%20strony&body=${body}`;
-    }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "NOV‑BUD Piotr Nowak",
-    "image": "https://dummyimage.com/1200x630/0ea5e9/ffffff&text=NOV-BUD",
-    "telephone": "+48508371380",
-    "email": "p.novak@o2.pl",
-    "address": {"@type":"PostalAddress","streetAddress":"ul. Jagiellońska 59","postalCode":"23-200","addressLocality":"Kraśnik","addressCountry":"PL"},
-    "areaServed": "Województwo lubelskie",
-    "serviceType": ["Termowizja FLIR E8","Audyt energetyczny (Czyste Powietrze)","Świadectwo charakterystyki energetycznej","Kosztorysy budowlane","Adaptacje projektów"],
-    "url": "https://termo-lab.github.io/NOV-BUD-Piotr-Nowak/"
-  }
-  </script>
+
 </head>
 <body>
+  
   <header>
     <div class="container nav">
-      <a class="brand" href="#">
-        <div class="logo"><img src="logo.png" alt="Logo NOV‑BUD Piotr Nowak"></div>
-        <h1>NOV‑BUD Piotr Nowak</h1>
+      <a class="brand" href="index.html" aria-label="Strona główna">
+        <div class="logo"><img src="logo.png" alt="Logo NOV‑BUD Piotr Nowak" loading="eager"></div>
       </a>
       <nav class="menu desktop">
-        <a href="#uslugi">Usługi</a>
-        <a href="#proces">Proces</a>
-        <a href="#cennik">Cennik</a>
-        <a href="#faq">FAQ</a>
-        <a href="#kontakt" class="btn">Zamów usługę</a>
+        <a href="index.html#uslugi">Usługi</a>
+        <a href="index.html#proces">Proces</a>
+        <a href="index.html#cennik">Cennik</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="wynajem.html">Wynajem</a>
+        <a href="index.html#kontakt" class="btn">Zamów usługę</a>
       </nav>
-      <button class="btn outline mobile" onclick="toggleMenu()">Menu</button>
+      <button class="btn outline mobile" onclick="(function(){document.querySelector('#mobileMenu').hidden = !document.querySelector('#mobileMenu').hidden})()">Menu</button>
     </div>
     <div id="mobileMenu" class="container" hidden>
       <div class="menu" style="padding:10px 0 16px; gap:12px; flex-wrap:wrap;">
-        <a href="#uslugi">Usługi</a>
-        <a href="#proces">Proces</a>
-        <a href="#cennik">Cennik</a>
-        <a href="#faq">FAQ</a>
-        <a href="#kontakt" class="btn">Zamów usługę</a>
+        <a href="index.html#uslugi">Usługi</a>
+        <a href="index.html#proces">Proces</a>
+        <a href="index.html#cennik">Cennik</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="wynajem.html">Wynajem</a>
+        <a href="index.html#kontakt" class="btn">Zamów usługę</a>
       </div>
     </div>
   </header>
 
+
   <main>
-    <section class="hero">
-      <div class="container wrap">
-        <div>
-          <div class="badges">
-            <span class="badge">🌡️ Termowizja – FLIR E8</span>
-            <span class="badge">⚡ Audyty (Czyste Powietrze)</span>
-            <span class="badge">🎯 Świadectwa energetyczne</span>
-            <span class="badge">📐 Adaptacje projektów</span>
-            <span class="badge">💶 Kosztorysy budowlane</span>
-          </div>
-          <h2>Badania termowizyjne i audyty energetyczne – woj. lubelskie</h2>
-          <p>Specjalizujemy się w badaniach kamerą termowizyjną <b>FLIR E8</b>, audytach energetycznych (także do programu <b>Czyste Powietrze</b>), świadectwach energetycznych, kosztorysach budowlanych i adaptacjach projektów.</p>
-          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
-            <a class="btn" href="#kontakt">Zamów usługę</a>
-            <a class="btn outline" href="tel:+48508371380">Zadzwoń: +48 508 371 380</a>
-          </div>
-          <p class="small" style="margin-top:10px; color:#94a3b8">Obsługujemy wyłącznie <b>województwo lubelskie</b>.</p>
-        </div>
-        <div class="hero-card">
-          <div class="thermal">Kadr z termowizji (symulacja)</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="uslugi" class="section">
+    <section class="section">
       <div class="container">
-        <h2>Usługi</h2>
-        <div class="grid-3">
+        <h1>Wynajem sprzętu i maszyn</h1>
+        <p class="muted">Kraśnik i woj. lubelskie. Odbiór osobisty lub dowóz po uzgodnieniu. Kaucja wg maszyny.</p>
+
+        <div class="grid-3" style="margin-top:16px">
           <div class="card">
-            <h3>Termowizja FLIR E8</h3>
-            <p class="muted">Wykrywanie mostków termicznych, nieszczelności, zawilgoceń i błędów ocieplenia. Raport ze zdjęciami IR.</p>
+            <h3>Zagęszczarka LUMAG</h3>
+            <p class="muted">Mocna płyta wibracyjna do kostki i podsypek.</p>
+            <p><b>250 zł / doba</b></p>
           </div>
           <div class="card">
-            <h3>Audyt energetyczny</h3>
-            <p class="muted">Audyty dla domów jednorodzinnych, także do programu <b>Czyste Powietrze</b>. Rekomendacje i kalkulacja oszczędności.</p>
+            <h3>Rębak do drewna</h3>
+            <p class="muted">Gałęzie i odpady drzewne.</p>
+            <p><b>300 zł / doba</b></p>
           </div>
           <div class="card">
-            <h3>Świadectwa energetyczne</h3>
-            <p class="muted">Wystawianie świadectw przy sprzedaży i najmie. Krótkie terminy, dokument PDF.</p>
-          </div>
-          <div class="card">
-            <h3>Kosztorysy budowlane</h3>
-            <p class="muted">Kosztorysy inwestorskie i ofertowe na podstawie projektu lub przedmiaru.</p>
-          </div>
-          <div class="card">
-            <h3>Adaptacje projektów</h3>
-            <p class="muted">Dostosowanie projektu do warunków lokalnych i wymagań urzędowych.</p>
+            <h3>Inny sprzęt</h3>
+            <p class="muted">Dodaj kolejne pozycje według potrzeb.</p>
+            <p><b>—</b></p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section id="proces" class="section">
-      <div class="container">
-        <h2>Jak przebiega współpraca</h2>
-        <div class="steps">
-          <div class="step"><b>1. Kontakt</b><span class="muted">Ustalamy zakres i termin.</span></div>
-          <div class="step"><b>2. Pomiary</b><span class="muted">Wizja lokalna i skan FLIR E8.</span></div>
-          <div class="step"><b>3. Analiza</b><span class="muted">Opracowanie wniosków i rekomendacji.</span></div>
-          <div class="step"><b>4. Dokumenty</b><span class="muted">Raport PDF / audyt / świadectwo.</span></div>
-        </div>
-      </div>
-    </section>
+        <h2 style="margin-top:28px">Cennik</h2>
+        <table>
+          <thead><tr><th>Sprzęt</th><th>Stawka</th><th>Jednostka</th><th>Uwagi</th></tr></thead>
+          <tbody>
+            <tr><td>Zagęszczarka LUMAG</td><td>250 zł</td><td>doba</td><td>Opcja dowozu</td></tr>
+            <tr><td>Rębak do drewna</td><td>300 zł</td><td>doba</td><td>Bez paliwa</td></tr>
+            <!-- PRZYKŁAD: skopiuj wiersz poniżej i edytuj nazwę/cenę
+            <tr><td>Młot wyburzeniowy</td><td>150 zł</td><td>doba</td><td>W zestawie dłuto</td></tr>
+            -->
+          </tbody>
+        </table>
 
-    <section id="cennik" class="section">
-      <div class="container">
-        <h2>Cennik (orientacyjny)</h2>
-        <div class="price">
-          <div class="plan">
-            <h3>Świadectwo energetyczne</h3>
-            <p><span class="big">od 349 zł</span> brutto</p>
-            <ul>
-              <li>Mieszkanie do 60 m²</li>
-              <li>PDF + rejestracja</li>
-            </ul>
-          </div>
-          <div class="plan" style="border-color:rgba(34,211,238,.45)">
-            <h3>Audyt (Czyste Powietrze)</h3>
-            <p><span class="big">od 1490 zł</span> brutto</p>
-            <ul>
-              <li>Dom jednorodzinny</li>
-              <li>Lista działań i oszczędności</li>
-            </ul>
-          </div>
-          <div class="plan">
-            <h3>Termowizja FLIR E8</h3>
-            <p><span class="big">od 490 zł</span> brutto</p>
-            <ul>
-              <li>Badanie do 2 h</li>
-              <li>Raport IR 24–72 h</li>
-            </ul>
-          </div>
-        </div>
-        <p class="small muted" style="margin-top:10px">Ostateczna wycena po krótkiej rozmowie i przesłaniu rzutów/zdjęć.</p>
-      </div>
-    </section>
-
-    <section id="faq" class="section faq">
-      <div class="container">
-        <h2>FAQ</h2>
-        <details>
-          <summary>W jakim regionie działacie?</summary>
-          <p class="muted">Obsługujemy wyłącznie <b>województwo lubelskie</b>.</p>
-        </details>
-        <details>
-          <summary>Jak przygotować budynek do termowizji?</summary>
-          <p class="muted">Najlepiej badać przy różnicy temperatur min. 10–15°C między wnętrzem a zewnętrzem. Zamknij okna i drzwi na 2–3 h przed wizytą.</p>
-        </details>
-      </div>
-    </section>
-
-    <section id="kontakt" class="section">
-      <div class="container contact">
-        <div>
-          <h2>Kontakt</h2>
-          <p class="muted">Zostaw wiadomość – odpiszemy i potwierdzimy termin.</p>
-          <form onsubmit="handleSubmit(event)">
-            <label>Imię i nazwisko
-              <input name="name" placeholder="Jan Kowalski" required />
-            </label>
-            <label>Telefon
-              <input name="phone" type="tel" placeholder="+48508371380" />
-            </label>
-            <label>Email
-              <input name="email" type="email" placeholder="p.novak@o2.pl" required />
-            </label>
-            <label>Usługa
-              <input name="service" placeholder="Termowizja / Audyt / Świadectwo / Kosztorys / Adaptacja" />
-            </label>
-            <label>Wiadomość
-              <textarea name="message" rows="5" placeholder="Opisz obiekt, metraż, lokalizację…"></textarea>
-            </label>
-            <button class="btn" type="submit">Zamów usługę</button>
-          </form>
-          <p class="small" style="margin-top:8px">lub napisz: <a href="mailto:p.novak@o2.pl">p.novak@o2.pl</a></p>
-        </div>
-        <div class="card">
-          <h3>Dane firmy</h3>
-          <p class="muted"><b>Piotr Nowak</b><br/>ul. Jagiellońska 59<br/>23-200 Kraśnik<br/>NIP: 7151741962</p>
-          <p>📞 <a href="tel:+48508371380">+48508371380</a><br/>✉️ <a href="mailto:p.novak@o2.pl">p.novak@o2.pl</a></p>
-          <div style="height:260px; border-radius:12px; border:1px solid rgba(255,255,255,.08); overflow:hidden">
-            <iframe title="Mapa Kraśnik, ul. Jagiellońska 59" width="100%" height="260" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Jagiello%C5%84ska+59,+Kra%C5%9Bnik&output=embed"></iframe>
-          </div>
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="tel:+48508371380">Zadzwoń: +48 508 371 380</a>
+          <a class="btn outline" href="mailto:p.novak@o2.pl">Napisz: p.novak@o2.pl</a>
+          <a class="btn outline" href="index.html">← Wróć na stronę główną</a>
         </div>
       </div>
     </section>
@@ -285,7 +147,6 @@
       <span><a href="#">Polityka prywatności</a> • <a href="#">RODO</a></span>
     </div>
   </footer>
-
   <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
 </html>
